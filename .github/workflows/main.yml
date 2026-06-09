@@ -1,5 +1,4 @@
-      - name: Build APK
-        run: flutter build apk --release --android-skip-build-dependency-validation
+name: Flutter Build APK
 
 on:
   push:
@@ -24,13 +23,13 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: 'stable' # यह अब अपने आप लेटेस्ट Flutter और Dart वर्ज़न उठा लेगा
+          channel: 'stable'
 
       - name: Get Dependencies
         run: flutter pub get
 
       - name: Build APK
-        run: flutter build apk --release
+        run: flutter build apk --release --android-skip-build-dependency-validation
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
