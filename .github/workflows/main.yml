@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4 # इसे v3 से v4 कर दिया गया है
+        uses: actions/checkout@v4
 
       - name: Setup Java
-        uses: actions/setup-java@v4 # इसे भी v4 कर दिया गया है
+        uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: '17'
@@ -23,8 +23,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0'
-          channel: 'stable'
+          channel: 'stable' # यह अब अपने आप लेटेस्ट Flutter और Dart वर्ज़न उठा लेगा
 
       - name: Get Dependencies
         run: flutter pub get
@@ -33,7 +32,7 @@ jobs:
         run: flutter build apk --release
 
       - name: Upload APK
-        uses: actions/upload-artifact@v4 # मेन एरर यहीं से था, इसे v4 कर दिया है
+        uses: actions/upload-artifact@v4
         with:
           name: app-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
