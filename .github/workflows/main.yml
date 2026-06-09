@@ -23,7 +23,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.3' # यह तुम्हारे ग्रैडल और पैकेजेस दोनों के साथ एकदम परफेक्ट सिंक होगा
+          flutter-version: '3.27.0' # यह तुम्हारे थीमिंग मेथड्स और ग्रैडल 34 दोनों के साथ एकदम परफेक्ट चलेगा
           channel: 'stable'
 
       - name: Get Dependencies
