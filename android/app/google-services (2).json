@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "550392220458",
+    "project_id": "agentprompt-a22b6",
+    "storage_bucket": "agentprompt-a22b6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550392220458:android:1f71cb6d34ba1fa1f32c53",
+        "android_client_info": {
+          "package_name": "com.prompt.agent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550392220458-nb4s1ajvsgs93luc3rd6d38kv48qgiih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt8kFUewTmcJFR9nt8Qd7zpUW38ZUL464"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550392220458-nb4s1ajvsgs93luc3rd6d38kv48qgiih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
