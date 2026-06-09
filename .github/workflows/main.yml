@@ -23,7 +23,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.27.0' # यह तुम्हारे थीमिंग मेथड्स और ग्रैडल 34 दोनों के साथ एकदम परफेक्ट चलेगा
+          flutter-version: '3.24.5' # यह वर्ज़न तुम्हारे कोड की थीम्स और पैकेजेस के साथ बिल्कुल परफेक्ट मैच होगा
           channel: 'stable'
 
       - name: Get Dependencies
@@ -37,3 +37,4 @@ jobs:
         with:
           name: app-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
+          
