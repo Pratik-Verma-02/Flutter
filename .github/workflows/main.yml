@@ -1,11 +1,10 @@
 name: Flutter Build APK
 
-# यह वर्कफ़्लो कब रन होगा:
 on:
   push:
     branches:
-      - main # अगर तुम्हारी ब्रांच का नाम 'master' है, तो इसे 'master' कर देना
-  workflow_dispatch: # यह तुम्हें GitHub वेबसाइट से मैन्युअली बिल्ड स्टार्ट करने का ऑप्शन देगा
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,18 +12,18 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # इसे v3 से v4 कर दिया गया है
 
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4 # इसे भी v4 कर दिया गया है
         with:
           distribution: 'zulu'
-          java-version: '17' # नए Flutter वर्ज़न के लिए Java 17 सही रहता है
+          java-version: '17'
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0' # अगर तुम कोई स्पेसिफिक वर्ज़न यूज़ कर रहे हो तो यहाँ बदल सकते हो
+          flutter-version: '3.19.0'
           channel: 'stable'
 
       - name: Get Dependencies
@@ -34,8 +33,7 @@ jobs:
         run: flutter build apk --release
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4 # मेन एरर यहीं से था, इसे v4 कर दिया है
         with:
           name: app-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
-          
